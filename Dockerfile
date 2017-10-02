@@ -18,6 +18,6 @@ ADD https://github.com/rabbitmq/rabbitmq-autocluster/releases/download/$AUTOCLUS
 RUN chmod 644 /plugins/*
 
 # Enable autocluster and shovel plugins
-RUN rabbitmq-plugins enable --offline autocluster
 RUN rabbitmq-plugins enable --offline rabbitmq_shovel
 RUN rabbitmq-plugins enable --offline rabbitmq_shovel_management
+RUN rabbitmq-plugins enable --offline autocluster

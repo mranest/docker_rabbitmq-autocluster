@@ -4,4 +4,4 @@ The standard upstream RabbitMQ image with the RabbitMQ peer discovery and cluste
 
 # TODO
 
-- Treat erlang cookie as a secret
+- Treat erlang cookie as a secret in the sample k8s configuration files

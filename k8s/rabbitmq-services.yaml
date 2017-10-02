@@ -7,15 +7,15 @@ spec:
     app: rabbitmq
   ports:
   - port: 5672
-    name: port-5672
+    name: rabbitmq-amqp
   - port: 4369
-    name: port-4369
+    name: rabbitmq-epmd
   - port: 5671
-    name: port-5671
+    name: rabbitmq-amqps
   - port: 15672
-    name: port-15672
+    name: rabbitmq-mgmt
   - port: 25672
-    name: port-25672
+    name: rabbitmq-node
   clusterIP: None
 ---
 kind: Service

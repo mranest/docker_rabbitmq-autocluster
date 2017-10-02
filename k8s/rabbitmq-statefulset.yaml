@@ -24,9 +24,9 @@ spec:
           - containerPort: 5671
             name: rabbitmq-amqps
           - containerPort: 15672
-            name: rabbitmq-management
+            name: rabbitmq-mgmt
           - containerPort: 25672
-            name: rabbitmq-internode
+            name: rabbitmq-node
         livenessProbe:
           exec:
             command: ["rabbitmqctl", "status"]
