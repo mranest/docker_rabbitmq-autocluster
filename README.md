@@ -5,3 +5,4 @@ The standard upstream RabbitMQ image with the [RabbitMQ peer discovery and clust
 # TODO
 
 - Treat erlang cookie as a secret in the sample k8s configuration files
+- Handle adding the `{"ha-mode":"all"}` policy at image / statefulset startup (as described in [Highly Available (Mirrored) Queues](https://www.rabbitmq.com/ha.html)

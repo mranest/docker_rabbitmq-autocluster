@@ -60,11 +60,6 @@ spec:
           value: "rabbitmq"
         - name: RABBITMQ_NODENAME
           value: "rabbitmq@$(HOSTNAME)"
-  volumeClaimTemplates:
-   - metadata:
-       name: rabbitmq
-     spec:
-       accessModes: ["ReadWriteOnce"]
-       resources:
-         requests:
-           storage: 1Gi
+      volumes:
+        - name : rabbitmq
+          emptyDir: {}

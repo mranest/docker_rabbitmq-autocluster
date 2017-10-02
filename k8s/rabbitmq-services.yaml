@@ -3,6 +3,10 @@ kind: Service
 metadata:
   name: rabbitmq
 spec:
+# Setting clusterIP to None means headless service
+# Headless services set pod network id as per:
+#   https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#stable-network-id
+  clusterIP: None
   selector:
     app: rabbitmq
   ports:
@@ -16,7 +20,6 @@ spec:
     name: rabbitmq-mgmt
   - port: 25672
     name: rabbitmq-node
-  clusterIP: None
 ---
 kind: Service
 apiVersion: v1
